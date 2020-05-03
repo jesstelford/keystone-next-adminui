@@ -1,9 +1,6 @@
 import { useRouter } from 'next/router';
 
 export const getStaticPaths = async () => {
-  const { keystone } = require('../../../../');
-  const meta = keystone.getAdminMeta({ schemaName: 'public' });
-
   return {
     // Don't pre-render _any_ paths (because it's not possible to know them)
     paths: [],
